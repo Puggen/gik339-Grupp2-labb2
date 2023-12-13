@@ -15,7 +15,7 @@ server
 server.get("/", (req, res) => {
     res.send({
         success: true, 
-        message: "Det funkar."
+        message: "Jag vill ha blommig falukorv till lunch pappa."
     });
 });
 server.post("/users", (req, res) =>  {

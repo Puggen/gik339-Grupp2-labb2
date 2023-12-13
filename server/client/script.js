@@ -1,12 +1,20 @@
 const url = "http://localhost:3000";
-const table_body = document.getElementById("table_body");
+const section = document.getElementById("app");
+const ul = document.createElement("ul")
+
+ul.classList.add("list-group")
+section.appendChild(ul);
+
+
 
 let user_data;
 
 fetch(url + '/users')
     .then(res => res.json())
     .then(data => {
+      console.log(data)
       data.forEach(user => {
-        table_body.innerHTML += `<tr><td>${user.id}</td><td>${user.firstName}</td><td>${user.lastName}</td><td>${user.username}</td><td>${user.color}</td></tr>`;
+        ul.innerHTML += `<li class="list-group-item" style="background: linear-gradient(270deg, rgba(0,35,36,0.9) 0%, ${user.color});">${user.firstName} ${user.lastName} <br> ${user.username}</li>`;
       })
 });
+
