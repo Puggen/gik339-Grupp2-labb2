@@ -2,15 +2,9 @@ const url = "http://localhost:3000";
 const section = document.getElementById("app");
 const ul = document.createElement("ul")
 
-
 ul.classList.add("list-group")
 section.classList.add("container-xl")
 section.appendChild(ul);
-
-
-
-
-
 
 let user_data;
 
