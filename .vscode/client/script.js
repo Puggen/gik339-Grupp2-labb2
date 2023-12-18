@@ -1,5 +1,5 @@
 const url = "http://localhost:3000";
-const section = document.getElementById("app");
+const section = document.getElementById("server");
 const ul = document.createElement("ul")
 
 ul.classList.add("list-group")
