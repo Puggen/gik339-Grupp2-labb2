@@ -3,6 +3,11 @@ const server = express();
 const sqlite3 = require("sqlite3").verbose();
 const db = new sqlite3.Database("./gik339-labb2.db");
 
+
+server.listen(3000, () => {
+    console.log("server is listening on port 3000!")
+}); 
+
 server
     .use(express.json())
     .use(express.urlencoded({ extended: false }))   
@@ -15,7 +20,7 @@ server
 server.get("/", (req, res) => {
     res.send({
         success: true, 
-        message: "Jag vill ha blommig falukorv till lunch pappa."
+        message: "Jaha."
     });
 });
 server.post("/users", (req, res) =>  {
@@ -40,6 +45,3 @@ server.get("/users", (req, res) => {
     return;
 });
 
-server.listen(3000, () => {
-    console.log("server is listening on port 3000!")
-}); 
